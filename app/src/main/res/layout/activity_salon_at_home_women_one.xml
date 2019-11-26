@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f7f8"
+    tools:context="bd.piniti.service.SalonAtHomeWomenOne">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar_all_services"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="11.7dp"
+        android:clipToPadding="false"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardReview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="11.7dp"
+            android:background="@drawable/gradient_rect"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_star3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.3sp"
+                android:text="4.5"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="1000+ Happy Customers"
+                android:layout_marginLeft="10dp"
+                android:textSize="13.3sp"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_right_arrow3"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.3sp"
+        android:text="Regular Waxing"
+        android:textColor="@color/txt_color"
+        android:layout_marginTop="16.7dp"
+        android:layout_marginLeft="11.7dp"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_waxing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_above="@+id/bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/shadow"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_gradient_rect"
+                android:layout_margin="11.7dp"
+                android:paddingTop="8.3dp"
+                android:paddingBottom="8.3dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@drawable/white_rect"
+                    android:text="2"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save $13 on this booking"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$62"
+                        android:textSize="18.3sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Summary"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_regular"/>
+
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_right_arrow3"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="@drawable/banner1"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service by Category"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="11.7dp"
+        android:layout_marginBottom="11.7dp"
+        android:textColor="@color/txt_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#d6cece"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/CategoryRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:clipToPadding="false"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="11.7dp"
+        android:layout_marginRight="11.7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="2dp"
+        android:background="@drawable/gradient_blue_rect">
+
+        <ImageView
+            android:layout_width="49.7dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="22dp"
+            android:src="@drawable/ic_shield"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rapid Insurance Protection
+Program"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upto $500 insurance protection with every
+service request"
+                android:textSize="10.7sp"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="10.7sp"
+                android:text="Learn more"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="right"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
