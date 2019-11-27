@@ -39,11 +39,11 @@ public class LoginSignupActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SelectCountryRecycleAdapter bAdapter;
 
-    private Integer image[] = {R.drawable.ic_bangladesh,R.drawable.ic_india,R.drawable.ic_canada,
+    private Integer image[] = {R.drawable.ic_bangladesh,R.drawable.ic_india,R.drawable.ic_america,R.drawable.ic_canada,
             R.drawable.ic_mexico,R.drawable.ic_australia,R.drawable.ic_brazil,
                                R.drawable.ic_russia};
-    private String country_name[] = {"Bangladesh","India","Canada","Mexico","Australia","Brazil","Russia"};
-    private String country_code[] = {"+880","+91","+1","+52","+61","+91","+43"};
+    private String country_name[] = {"Bangladesh","India","US","Canada","Mexico","Australia","Brazil","Russia"};
+    private String country_code[] = {"+880","+91","+1","+1","+52","+61","+91","+43"};
 
 
 
