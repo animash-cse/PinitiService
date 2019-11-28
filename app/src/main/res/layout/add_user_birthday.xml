@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserInformations.AddBirthdayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_add_details" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="16.3dp"
+                    android:paddingTop="26.7dp"
+                    android:paddingBottom="26.7dp"
+                    android:text="Your Date of Birth"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="10.7dp"
+                    android:layout_marginTop="12.3dp"
+                    android:layout_marginRight="16.7dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/day"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/edit_address_rect"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:hint="Day"
+                        android:inputType="number"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="13dp"
+                        android:textColor="@color/walkthrough_txt"
+                        android:textColorHint="#8f909e"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/month"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="11.7dp"
+                        android:background="@drawable/edit_address_rect"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:hint="Month"
+                        android:inputType="number"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="13dp"
+                        android:textColor="@color/walkthrough_txt"
+                        android:textColorHint="#8f909e"
+                        android:textSize="15sp" />
+                    <EditText
+                        android:id="@+id/year"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="11.7dp"
+                        android:background="@drawable/edit_address_rect"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:hint="Year"
+                        android:inputType="number"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="13dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="13dp"
+                        android:textColor="@color/walkthrough_txt"
+                        android:textColorHint="#8f909e"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/bottom_linear"
+        android:background="@drawable/shadow" />
+
+    <LinearLayout
+        android:id="@+id/bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/previous2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="15dp"
+            android:text="Previous"
+            android:textColor="@color/txt_color"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/next2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="right"
+            android:onClick="onClick"
+            android:padding="15dp"
+            android:text="Next"
+            android:textColor="@color/txt_color" />
+    </LinearLayout>
+
+</RelativeLayout>

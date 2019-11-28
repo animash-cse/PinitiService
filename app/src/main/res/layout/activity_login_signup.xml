@@ -42,7 +42,7 @@
             android:fontFamily="@font/mavenpro_medium"
 
             android:gravity="center"
-            android:text="@string/rapid"
+            android:text="@string/service"
             android:textColor="@color/txt_color"
             android:textSize="33.3sp" />
 

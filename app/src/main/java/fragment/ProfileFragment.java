@@ -17,14 +17,15 @@ import java.util.ArrayList;
 
 import Adapter.ProfileRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
+import bd.piniti.service.AddUserInformations.AddNameActivity;
 import bd.piniti.service.R;
-import bd.piniti.service.SplashScreenActivity;
 
 
 public class ProfileFragment extends Fragment {
 
     private View view;
     private TextView signOut;
+    private TextView test;
 
     private ArrayList<HomeCategoryModelClass> homeCategoryModelClasses;
     private RecyclerView recyclerView;
@@ -45,11 +46,20 @@ public class ProfileFragment extends Fragment {
         /*category recyclerview code is here*/
 
         signOut = view.findViewById(R.id.log_out);
+        test = view.findViewById(R.id.user_data);
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 getActivity().finish();
+            }
+        });
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddNameActivity.class);
+                startActivity(intent);
             }
         });
 

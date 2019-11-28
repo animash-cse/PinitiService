@@ -20,7 +20,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo_rapid"
+        android:src="@drawable/piniti_logo"
         android:layout_gravity="center"/>
 </LinearLayout>
 
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/txt_color"
-        android:text="@string/rapid"
+        android:text="@string/service"
         android:textSize="33.3sp"
         android:layout_centerInParent="true"
         android:fontFamily="@font/mavenpro_medium"
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16.7sp"
-        android:text="Home Service Expert"
+        android:text="Makes Life Better"
         android:gravity="center"
         android:layout_marginTop="5dp"
         android:letterSpacing="0.0625"

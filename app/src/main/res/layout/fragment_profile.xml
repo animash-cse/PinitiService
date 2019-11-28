@@ -21,8 +21,6 @@
            android:layout_height="wrap_content"
            android:orientation="horizontal">
 
-
-           
            <de.hdodenhof.circleimageview.CircleImageView
                android:layout_width="59.7dp"
                android:layout_height="59.7dp"
@@ -97,7 +95,7 @@
 
     <TextView
         android:id="@+id/log_out"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
         android:clickable="true"
@@ -112,5 +110,24 @@
         android:textColor="#eb4335"
         android:focusable="true"
         tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/user_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:text="Test Upload User Data"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_regular"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="#eb4335"
+        android:focusable="true"
+        />
+
 
 </LinearLayout>
