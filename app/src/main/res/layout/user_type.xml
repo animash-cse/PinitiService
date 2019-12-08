@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddUserInformations.GenderActivity">
-
+    tools:context=".AddUserInformations.UserTypeActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,12 +27,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/roboto_medium"
-                    android:gravity="center_horizontal"
-                    android:paddingLeft="16.3dp"
+                    android:gravity="center"
                     android:paddingTop="26.7dp"
                     android:paddingBottom="26.7dp"
-                    android:text="Select Your Gender"
+                    android:text="User Type"
                     android:textColor="@color/walkthrough_txt"
                     android:textSize="20sp" />
 
@@ -42,53 +41,48 @@
                     android:layout_height="1dp"
                     android:background="@color/view_line" />
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10.7dp"
-                    android:layout_marginTop="12.3dp"
+                    android:layout_marginLeft="16.7dp"
+                    android:layout_marginTop="17.3dp"
                     android:layout_marginRight="16.7dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <RadioGroup
-                        android:id="@+id/gender"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="16.7dp"
-                        android:layout_marginTop="17dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/radio_male"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Male"
-                            android:theme="@style/MyRadioButton" />
-
-                        <RadioButton
-                            android:id="@+id/radio_female"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Female"
-                            android:theme="@style/MyRadioButton" />
-
-                        <RadioButton
-                            android:id="@+id/radio_others"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Other"
-                            android:theme="@style/MyRadioButton" />
-                    </RadioGroup>
+                    android:orientation="vertical">
 
                 </LinearLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:buttonTint="@color/radio_color"
+                        android:fontFamily="@font/roboto_regular"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:text="Customer"
+                        android:theme="@style/MyRadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/radio_provider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:buttonTint="@color/radio_color"
+                        android:fontFamily="@font/roboto_regular"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:text="Service Provider"
+                        android:theme="@style/MyRadioButton" />
+
+                </RadioGroup>
 
             </LinearLayout>
         </ScrollView>
@@ -109,10 +103,11 @@
         android:background="@color/white">
 
         <TextView
-            android:id="@+id/previous3"
+            android:id="@+id/type_previous"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingStart="30dp"
             android:fontFamily="@font/roboto_regular"
             android:padding="15dp"
             android:text="Previous"
@@ -121,10 +116,11 @@
 
 
         <TextView
-            android:id="@+id/next3"
+            android:id="@+id/type_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingEnd="30dp"
             android:clickable="true"
             android:fontFamily="@font/roboto_regular"
             android:gravity="right"
@@ -133,4 +129,5 @@
             android:text="Next"
             android:textColor="@color/txt_color" />
     </LinearLayout>
+
 </RelativeLayout>

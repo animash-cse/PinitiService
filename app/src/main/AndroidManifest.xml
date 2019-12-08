@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddUserInformations.GenderActivity"></activity>
+        <activity android:name=".AddUserInformations.UserAddressActivity"></activity>
+        <activity android:name=".AddUserInformations.UserTypeActivity" />
+        <activity android:name=".AddUserInformations.GenderActivity" />
         <activity android:name=".AddUserInformations.AddBirthdayActivity" />
         <activity android:name=".AddUserInformations.AddNameActivity" />
         <activity android:name=".SplashScreenActivity">

@@ -14,5 +14,4 @@
         android:fontFamily="@font/roboto_medium"
         android:text="Your Details"/>
 
-
 </android.support.v7.widget.Toolbar>

@@ -4,6 +4,9 @@
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="start">Get Started</string>
+    <string name="spinner_division">Select Division</string>
+    <string name="spinner_districts">Select Districts</string>
+    <string name="spinner_subdistricts">Select Sub-Districts</string>
     <string name="we_provide_over_100_services_at_your_doorstep">We provide over 100+ services \nat your doorstep</string>
     <string name="_1_million_happy_customers">1 Million+ \nHappy Customers</string>
     <string name="_1000_trusted_service_professionals">1000+ Trusted \nService Professionals</string>
