@@ -54,10 +54,10 @@ public class UserTypeActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if(view.getId() == R.id.previous1) {
+        if(view.getId() == R.id.type_previous) {
             onBackPressed();
         }
-        if(view.getId() == R.id.next1) {
+        if(view.getId() == R.id.type_next) {
             Intent intent = new Intent(UserTypeActivity.this, GenderActivity.class);
             startActivity(intent);
         }

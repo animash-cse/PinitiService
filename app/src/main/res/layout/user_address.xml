@@ -172,15 +172,16 @@
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/radio4"
+                        android:id="@+id/radio_home"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_regular"
+                        android:checked="true"
                         android:text="Home"
                         android:theme="@style/MyRadioButton" />
 
                     <RadioButton
-                        android:id="@+id/radio5"
+                        android:id="@+id/radio_office"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -189,7 +190,7 @@
                         android:theme="@style/MyRadioButton" />
 
                     <RadioButton
-                        android:id="@+id/radio6"
+                        android:id="@+id/radio_othersa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -217,7 +218,7 @@
         android:background="@color/white">
 
         <TextView
-            android:id="@+id/type_previous"
+            android:id="@+id/address_previous"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -229,7 +230,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/type_next"
+            android:id="@+id/address_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

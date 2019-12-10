@@ -7,6 +7,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -29,6 +31,11 @@ public class UserAddressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_address);
 
+        RadioGroup rg = findViewById(R.id.radio_address);
+        RadioButton home = findViewById(R.id.radio_home);
+        RadioButton office = findViewById(R.id.radio_office);
+        RadioButton othersAddress = findViewById(R.id.radio_othersa);
+
         // Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -40,15 +47,32 @@ public class UserAddressActivity extends AppCompatActivity {
         districts = findViewById(R.id.districts);
         subDistricts = findViewById(R.id.sub_districts);
 
+        rg.setOnCheckedChangeListener((group, checkedId) -> {
+            switch(checkedId){
+                case R.id.radio_male:
+                    final String radiHome = home.getText().toString();
+                    databaseUser.child("address").setValue(radiHome);
+                    break;
+                case R.id.radio_female:
+                    final String radioffice = office.getText().toString();
+                    databaseUser.child("address").setValue(radioffice);
+                    break;
+                case R.id.radio_others:
+                    final String radiOthersAddress = othersAddress.getText().toString();
+                    databaseUser.child("address").setValue(radiOthersAddress);
+                    break;
+            }
+        });
+
         spinnerDivisionData();
 
     }
 
     public void onClick(View view) {
-        if(view.getId() == R.id.previous3) {
+        if(view.getId() == R.id.address_previous) {
             onBackPressed();
         }
-        if(view.getId() == R.id.next3) {
+        if(view.getId() == R.id.address_next) {
             uploadAddress();
         }
     }
