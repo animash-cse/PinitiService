@@ -19,6 +19,7 @@ import Adapter.ProfileRecycleAdapter;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.AddUserInformations.AddNameActivity;
 import bd.piniti.service.AddUserInformations.UserAddressActivity;
+import bd.piniti.service.AddUserInformations.UserTypeActivity;
 import bd.piniti.service.R;
 
 
@@ -59,7 +60,7 @@ public class ProfileFragment extends Fragment {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), UserAddressActivity.class);
+                Intent intent = new Intent(getActivity(), UserTypeActivity.class);
                 startActivity(intent);
             }
         });

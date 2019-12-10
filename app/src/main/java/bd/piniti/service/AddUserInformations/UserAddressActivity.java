@@ -1,22 +1,40 @@
 package bd.piniti.service.AddUserInformations;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import bd.piniti.service.R;
+import fragment.HomeFragment;
 
 public class UserAddressActivity extends AppCompatActivity {
 
     private Spinner division, districts, subDistricts;
+    // Declare Database for data fields
+    private DatabaseReference databaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_address);
+
+        // Here get user id in currentFirebaseUser
+        //  Declare firebase user for get user id
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        // Set database location
+        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
 
         division = findViewById(R.id.divisions);
         districts = findViewById(R.id.districts);
@@ -27,6 +45,30 @@ public class UserAddressActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        if(view.getId() == R.id.previous3) {
+            onBackPressed();
+        }
+        if(view.getId() == R.id.next3) {
+            uploadAddress();
+        }
+    }
+
+    private void uploadAddress() {
+
+        final String userdDivision = division.getSelectedItem().toString();
+        final String userDistricts = districts.getSelectedItem().toString();
+        final String userSubDistricts = subDistricts.getSelectedItem().toString();
+        if(!TextUtils.isEmpty(userdDivision)&& !TextUtils.isEmpty(userDistricts) && !TextUtils.isEmpty(userSubDistricts)){
+            databaseUser.child("division").setValue(userdDivision);
+            databaseUser.child("district").setValue(userDistricts);
+            databaseUser.child("sub_district").setValue(userSubDistricts);
+
+            Intent intent = new Intent(UserAddressActivity.this, HomeFragment.class);
+            startActivity(intent);
+        }else {
+            Toast.makeText(this,"Please select your address properly", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     public void spinnerDivisionData() {
@@ -52,19 +94,19 @@ public class UserAddressActivity extends AppCompatActivity {
         //     Dhaka and Dhaka Subdistricts
         final String[] DhakaSubdivision = {"Dhaka", "Faridpur", "Gazipur", "Gopalganj", "Kishoreganj", "Madaripur",
                 "Manikganj", "Munshiganj", "Narayanganj", "Narsingdi", "Rajbari", "Shariatpur", "Tangail"};
-        final String[] DhakaSubdistricts = {};
-        final String[] FaridpurSubdistricts = {};
-        final String[] GazipurSubdistricts = {};
-        final String[] GopalganjSubdistricts = {};
-        final String[] KishoreganjSubdistricts = {};
-        final String[] MadaripurSubdistricts = {};
-        final String[] ManikganjSubdistricts = {};
-        final String[] MunshiganjSubdistricts = {};
-        final String[] NarayanganjSubdistricts = {};
-        final String[] NarsingdiSubdistricts = {};
-        final String[] RajbariSubdistricts = {};
-        final String[] ShariatpurSubdistricts = {};
-        final String[] TangailSubdistricts = {};
+        final String[] DhakaSubdistricts = {"Dhamrai ", "Dohar ", "Keraniganj ", "Nawabganj ","Savar ","Tejgaon "};
+        final String[] FaridpurSubdistricts = {"Alfadanga ","Bhanga ","Boalmari ","Charbhadrasan ","Faridpur Sadar ","Madhukhali ","Nagarkanda ","Sadarpur ","Saltha "};
+        final String[] GazipurSubdistricts = {"Gazipur Sadar ","Kaliakair ","Kaliganj ","Kapasia ","Sreepur "};
+        final String[] GopalganjSubdistricts = {"Gopalganj ","Kashiani ","Kotalipara ","Muksudpur ","Tungipara "};
+        final String[] KishoreganjSubdistricts = {"Austagram ","Bajitpur ","Bhairab ","Hossainpur ","Itna ","Karimganj ","Katiadi ","Kishoreganj Sadar ","Kuliarchar ","Mithamain ","Nikli ","Pakundia ","Tarail "};
+        final String[] MadaripurSubdistricts = {"Rajoir ","Madaripur ","Kalkini ","Shibchar "};
+        final String[] ManikganjSubdistricts = {"Daulatpur ","Ghior ","Harirampur ","Manikgonj ","Saturia ","Shivalaya ","Singair "};
+        final String[] MunshiganjSubdistricts = {"Gazaria ","Lohajang ","Munshiganj ","Sirajdikhan ","Sreenagar ","Tongibari "};
+        final String[] NarayanganjSubdistricts = {"Araihazar ","Bandar ","Narayanganj Sadar ","Rupganj ","Sonargaon "};
+        final String[] NarsingdiSubdistricts = {"Narsingdi Sadar ","Belabo ","Monohardi ","Palash ","Raipura ","Shibpur "};
+        final String[] RajbariSubdistricts = {"Baliakandi ","Goalandaghat ","Pangsha ","Rajbari Sadar ","Kalukhali "};
+        final String[] ShariatpurSubdistricts = {"Bhedarganj ","Damudya ","Gosairhat ","Naria ","Shariatpur Sadar ","Zajira ","Shakhipur "};
+        final String[] TangailSubdistricts = {"Gopalpur ","Basail ","Bhuapur ","Delduar ","Ghatail ","Kalihati ","Madhupur ","Mirzapur ","Nagarpur ","Sakhipur ","Dhanbari ","Tangail Sadar "};
 
         //     Khulna and Khulna Subdistricts
         final String[] KhulnaSubdivision = {"Bagerhat", "Chuadanga", "Jashore", "Jhenaidah", "Khulna", "Kushtia",

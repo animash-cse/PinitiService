@@ -24,11 +24,6 @@ public class AddBirthdayActivity extends AppCompatActivity {
     // Declare Database for data fields
     private DatabaseReference databaseUser;
 
-    // Declare Storage for images
-    private StorageReference mStorage;
-
-    //  Declare firebase user for get user id
-    private FirebaseUser currentFirebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +35,8 @@ public class AddBirthdayActivity extends AppCompatActivity {
         year = findViewById(R.id.year);
 
         // Here get user id in currentFirebaseUser
-        currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        //  Declare firebase user for get user id
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Set database location
         databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
@@ -69,7 +65,7 @@ public class AddBirthdayActivity extends AppCompatActivity {
             databaseUser.child("birthDay").setValue(birthDay);
 
             Toast.makeText(this, "Date of Birth Added", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(AddBirthdayActivity.this, GenderActivity.class);
+            Intent intent = new Intent(AddBirthdayActivity.this, AddNameActivity.class);
             startActivity(intent);
         }
         else{

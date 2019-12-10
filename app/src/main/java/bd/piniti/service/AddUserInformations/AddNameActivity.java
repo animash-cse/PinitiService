@@ -25,12 +25,6 @@ public class AddNameActivity extends AppCompatActivity {
     // Declare Database for data fields
     private DatabaseReference databaseUser;
 
-    // Declare Storage for images
-    private StorageReference mStorage;
-
-    //  Declare firebase user for get user id
-    private FirebaseUser currentFirebaseUser;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,29 +32,14 @@ public class AddNameActivity extends AppCompatActivity {
 
         firstName = findViewById(R.id.first_name);
         lastName = findViewById(R.id.last_name);
-        /*nextButton = findViewById(R.id.next1);
-        previousButton = findViewById(R.id.previous1);*/
 
         // Here get user id in currentFirebaseUser
-        currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        //  Declare firebase user for get user id
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Set database location
         databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
 
-        /*// Button action for next
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                uploadUserName();
-            }
-        });
-        // Button action for previous
-        previousButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });*/
     }
 
     public void onClick(View view) {
@@ -76,11 +55,13 @@ public class AddNameActivity extends AppCompatActivity {
 
         final String nameF =  firstName.getText().toString().trim();
         final String nameL = lastName.getText().toString().trim();
+        final String userName = nameF.toLowerCase()+" "+nameL.toLowerCase();
 
         if(!TextUtils.isEmpty(nameF) && !TextUtils.isEmpty(nameL) )
         {
             databaseUser.child("first_name").setValue(nameF);
             databaseUser.child("last_name").setValue(nameL);
+            databaseUser.child("user_name").setValue(userName);
 
             Toast.makeText(this, "Name Added", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(AddNameActivity.this, AddBirthdayActivity.class);
