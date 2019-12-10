@@ -124,6 +124,7 @@
             android:text="Previous"
             android:onClick="onClick"
             android:clickable="true"
+            android:focusable="true"
             android:textColor="@color/txt_color"
             android:visibility="visible" />
 
@@ -136,6 +137,7 @@
             android:fontFamily="@font/roboto_regular"
             android:onClick="onClick"
             android:clickable="true"
+            android:focusable="true"
             android:gravity="right"
             android:padding="15dp"
             android:text="Next"

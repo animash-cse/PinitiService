@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,6 +28,14 @@ public class GenderActivity extends AppCompatActivity {
         RadioButton male = findViewById(R.id.radio_male);
         RadioButton female = findViewById(R.id.radio_female);
         RadioButton others = findViewById(R.id.radio_others);
+        TextView previous = findViewById(R.id.previous3);
+
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         //  Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
@@ -54,9 +63,6 @@ public class GenderActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if(view.getId() == R.id.previous3) {
-            onBackPressed();
-        }
         if(view.getId() == R.id.next3) {
             Intent intent = new Intent(GenderActivity.this, AddBirthdayActivity.class);
             startActivity(intent);

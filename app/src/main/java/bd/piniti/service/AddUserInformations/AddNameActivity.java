@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +33,14 @@ public class AddNameActivity extends AppCompatActivity {
 
         firstName = findViewById(R.id.first_name);
         lastName = findViewById(R.id.last_name);
+        TextView previous = findViewById(R.id.previous1);
+
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
@@ -43,9 +52,6 @@ public class AddNameActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if(view.getId() == R.id.previous1) {
-            onBackPressed();
-        }
         if(view.getId() == R.id.next1) {
             uploadUserName();
         }
@@ -64,7 +70,7 @@ public class AddNameActivity extends AppCompatActivity {
             databaseUser.child("user_name").setValue(userName);
 
             Toast.makeText(this, "Name Added", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(AddNameActivity.this, AddBirthdayActivity.class);
+            Intent intent = new Intent(AddNameActivity.this, UserAddressActivity.class);
             startActivity(intent);
         }
         else{

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +34,14 @@ public class AddBirthdayActivity extends AppCompatActivity {
         day = findViewById(R.id.day);
         month = findViewById(R.id.month);
         year = findViewById(R.id.year);
+        TextView previous = findViewById(R.id.previous2);
+
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
@@ -44,9 +53,6 @@ public class AddBirthdayActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if(view.getId() == R.id.previous2) {
-            onBackPressed();
-        }
         if(view.getId() == R.id.next2) {
             uploadUserBirth();
         }

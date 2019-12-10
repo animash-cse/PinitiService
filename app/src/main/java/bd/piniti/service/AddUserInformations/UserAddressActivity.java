@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,6 +36,14 @@ public class UserAddressActivity extends AppCompatActivity {
         RadioButton home = findViewById(R.id.radio_home);
         RadioButton office = findViewById(R.id.radio_office);
         RadioButton othersAddress = findViewById(R.id.radio_othersa);
+        TextView previous = findViewById(R.id.address_previous);
+
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
@@ -69,9 +78,6 @@ public class UserAddressActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if(view.getId() == R.id.address_previous) {
-            onBackPressed();
-        }
         if(view.getId() == R.id.address_next) {
             uploadAddress();
         }

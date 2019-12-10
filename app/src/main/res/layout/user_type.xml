@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddUserInformations.UserTypeActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -77,8 +78,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:buttonTint="@color/radio_color"
-                        android:fontFamily="@font/roboto_regular"
                         android:checked="true"
+                        android:fontFamily="@font/roboto_regular"
                         android:scaleX="1.5"
                         android:scaleY="1.5"
                         android:text="Service Provider"
@@ -102,19 +103,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/type_previous"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingStart="30dp"
+            android:clickable="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
             android:fontFamily="@font/roboto_regular"
             android:padding="15dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="Previous"
-            android:textColor="@color/txt_color"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:textColor="@color/txt_color" />
 
 
         <TextView
@@ -122,12 +128,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingEnd="30dp"
             android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:fontFamily="@font/roboto_regular"
-            android:gravity="right"
+            android:gravity="end"
             android:onClick="onClick"
             android:padding="15dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="Next"
             android:textColor="@color/txt_color" />
     </LinearLayout>
