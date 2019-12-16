@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import java.util.List;
 import ModelClass.HomeCategoryModelClass;
 import bd.piniti.service.All_Services_Activity;
 import bd.piniti.service.R;
+import fragment.CategoryFragment;
 
 
 public class HomeCategoryRecycleAdapter extends RecyclerView.Adapter<HomeCategoryRecycleAdapter.MyViewHolder> {
@@ -23,7 +25,6 @@ public class HomeCategoryRecycleAdapter extends RecyclerView.Adapter<HomeCategor
 
 
     private List<HomeCategoryModelClass> OfferList;
-
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -38,8 +39,6 @@ public class HomeCategoryRecycleAdapter extends RecyclerView.Adapter<HomeCategor
 
             image = (ImageView) view.findViewById(R.id.image);
             title = (TextView) view.findViewById(R.id.title);
-
-
         }
 
     }
@@ -70,12 +69,9 @@ public class HomeCategoryRecycleAdapter extends RecyclerView.Adapter<HomeCategor
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                    Intent intent = new Intent(context, All_Services_Activity.class);
-                    intent.putExtra("layout",position);
-                    context.startActivity(intent);
-
-
+                Intent intent = new Intent(context, All_Services_Activity.class);
+                intent.putExtra("layout", position);
+                context.startActivity(intent);
 
             }
         });

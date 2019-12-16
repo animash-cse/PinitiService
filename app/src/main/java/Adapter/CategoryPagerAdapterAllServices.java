@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import fragment.ApplianceRepairFragment;
 import fragment.BeautyFragment;
+import fragment.CategoryFragment;
 import fragment.ElectricianFragment;
 import fragment.HomeCleaningFragment;
 import fragment.MovingHomeFragment;
@@ -14,11 +15,6 @@ import fragment.PaintingFragment;
 import fragment.PestControlFragment;
 import fragment.PlumberFragment;
 import fragment.WeddingEventsFragment;
-
-
-/**
- * Created by wolfsoft5 on 7/4/18.
- */
 
 public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
 
@@ -66,10 +62,8 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab8;
 
                         case 8:
-                                ElectricianFragment tab9 = new ElectricianFragment();
+                                CategoryFragment tab9 = new CategoryFragment();
                                 return tab9;
-
-
                         default:
                                 return null;
 

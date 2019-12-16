@@ -85,11 +85,11 @@ public class UserAddressActivity extends AppCompatActivity {
 
     private void uploadAddress() {
 
-        final String userdDivision = division.getSelectedItem().toString();
+        final String userDivision = division.getSelectedItem().toString();
         final String userDistricts = districts.getSelectedItem().toString();
         final String userSubDistricts = subDistricts.getSelectedItem().toString();
-        if(!TextUtils.isEmpty(userdDivision)&& !TextUtils.isEmpty(userDistricts) && !TextUtils.isEmpty(userSubDistricts)){
-            databaseUser.child("division").setValue(userdDivision);
+        if(!TextUtils.isEmpty(userDivision)&& !TextUtils.isEmpty(userDistricts) && !TextUtils.isEmpty(userSubDistricts)){
+            databaseUser.child("division").setValue(userDivision);
             databaseUser.child("district").setValue(userDistricts);
             databaseUser.child("sub_district").setValue(userSubDistricts);
 
@@ -296,15 +296,15 @@ public class UserAddressActivity extends AppCompatActivity {
                     });
                 }
                 if(position == 2){
-                    ArrayAdapter<String> distric = new ArrayAdapter<>(UserAddressActivity.this, android.R.layout.simple_spinner_dropdown_item, ChittagongSubdivision);
-                    districts.setAdapter(distric);
+                    ArrayAdapter<String> district = new ArrayAdapter<>(UserAddressActivity.this, android.R.layout.simple_spinner_dropdown_item, ChittagongSubdivision);
+                    districts.setAdapter(district);
 
                     districts.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                             if(i==0){
-                                ArrayAdapter<String> subdistric = new ArrayAdapter<>(UserAddressActivity.this, android.R.layout.simple_spinner_dropdown_item, BandarbanSubdistricts);
-                                subDistricts.setAdapter(subdistric);
+                                ArrayAdapter<String> subdistrict = new ArrayAdapter<>(UserAddressActivity.this, android.R.layout.simple_spinner_dropdown_item, BandarbanSubdistricts);
+                                subDistricts.setAdapter(subdistrict);
                             }
                             if(i==1){
                                 ArrayAdapter<String> subdistric = new ArrayAdapter<>(UserAddressActivity.this, android.R.layout.simple_spinner_dropdown_item, BrahmanbariaSubdistricts);
