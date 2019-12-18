@@ -62,7 +62,7 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                                 return tab8;
 
                         case 8:
-                                CategoryFragment tab9 = new CategoryFragment();
+                                ElectricianFragment tab9 = new ElectricianFragment();
                                 return tab9;
                         default:
                                 return null;

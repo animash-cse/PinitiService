@@ -25,168 +25,156 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingBottom="100dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="100dp">
 
 
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Select services in Blocks
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginRight="40dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="Select services in Blocks
 &amp; Leakages:"
-            android:textColor="@color/txt_color"
-            android:textSize="21.7sp"
-            android:fontFamily="@font/roboto_bold"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="33dp"
-            android:gravity="center"/>
+                    android:textColor="@color/txt_color"
+                    android:textSize="21.7sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingLeft="5dp"
+                        android:text="Kitchen Sink"
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp"
+                        android:theme="@style/MyRadioButton" />
 
 
-
-            <CheckBox
-                android:id="@+id/checkbox1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kitchen Sink"
-                android:layout_marginTop="40dp"
-                android:textColor="@color/walkthrough_txt"
-                android:fontFamily="@font/roboto_regular"
-                android:theme="@style/MyRadioButton"
-                android:layout_marginLeft="33dp"
-                android:textSize="15sp"
-                android:paddingLeft="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="72dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="$50"
+                        android:textColor="#8f909e"
+                        android:textSize="13.3sp" />
 
 
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="34dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingLeft="5dp"
+                        android:text="Western Commode"
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp"
+                        android:theme="@style/MyRadioButton" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#8f909e"
-                android:text="$50"
-                android:textSize="13.3sp"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginLeft="72dp"/>
-
-
-
-            <CheckBox
-                android:id="@+id/checkbox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Western Commode"
-                android:textColor="@color/walkthrough_txt"
-                android:fontFamily="@font/roboto_regular"
-                android:theme="@style/MyRadioButton"
-                android:layout_marginTop="34dp"
-                android:textSize="15sp"
-                android:layout_marginLeft="33dp"
-                android:paddingLeft="5dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#8f909e"
-                android:text="$50"
-                android:textSize="13.3sp"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginLeft="72dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="72dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="$50"
+                        android:textColor="#8f909e"
+                        android:textSize="13.3sp" />
 
 
-            <CheckBox
-                android:id="@+id/checkbox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tap "
-                android:textColor="@color/walkthrough_txt"
-                android:fontFamily="@font/roboto_regular"
-                android:theme="@style/MyRadioButton"
-                android:layout_marginTop="34dp"
-                android:textSize="15sp"
-                android:layout_marginLeft="33dp"
-                android:paddingLeft="5dp"/>
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="34dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingLeft="5dp"
+                        android:text="Tap "
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp"
+                        android:theme="@style/MyRadioButton" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#8f909e"
-                android:text="$50"
-                android:textSize="13.3sp"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginLeft="72dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="72dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="$50"
+                        android:textColor="#8f909e"
+                        android:textSize="13.3sp" />
 
-            <CheckBox
-                android:id="@+id/checkbox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wash Basin  "
-                android:textColor="@color/walkthrough_txt"
-                android:fontFamily="@font/roboto_regular"
-                android:theme="@style/MyRadioButton"
-                android:layout_marginTop="34dp"
-                android:textSize="15sp"
-                android:layout_marginLeft="33dp"
-                android:paddingLeft="5dp"/>
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="34dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingLeft="5dp"
+                        android:text="Wash Basin  "
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp"
+                        android:theme="@style/MyRadioButton" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#8f909e"
-                android:text="$30"
-                android:textSize="13.3sp"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginLeft="72dp"/>
-            <CheckBox
-                android:id="@+id/checkbox5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shower"
-                android:textColor="@color/walkthrough_txt"
-                android:fontFamily="@font/roboto_regular"
-                android:theme="@style/MyRadioButton"
-                android:layout_marginTop="34dp"
-                android:textSize="15sp"
-                android:layout_marginLeft="33dp"
-                android:paddingLeft="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="72dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="$30"
+                        android:textColor="#8f909e"
+                        android:textSize="13.3sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#8f909e"
-                android:text="$50"
-                android:textSize="13.3sp"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginLeft="72dp"/>
+                    <CheckBox
+                        android:id="@+id/checkbox5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="34dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingLeft="5dp"
+                        android:text="Shower"
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp"
+                        android:theme="@style/MyRadioButton" />
 
-
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="72dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="$50"
+                        android:textColor="#8f909e"
+                        android:textSize="13.3sp" />
 
 
-
-
-
-        </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
 
 
-
     </LinearLayout>
 
     <LinearLayout
-        android:layout_above="@+id/bottom_linear"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@drawable/shadow"/>
+        android:layout_above="@+id/bottom_linear"
+        android:background="@drawable/shadow" />
 
     <LinearLayout
         android:id="@+id/bottom_linear"
@@ -199,13 +187,13 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/blue_gradient_rect"
-            android:text="Next"
-            android:textSize="18.3sp"
             android:layout_margin="11.7dp"
-            android:textColor="@color/white"
+            android:background="@drawable/blue_gradient_rect"
             android:fontFamily="@font/roboto_medium"
-            android:textAllCaps="false"/>
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18.3sp" />
     </LinearLayout>
 
 

@@ -48,8 +48,4 @@
         app:itemTextColor="@drawable/selector_bottombar_item"
         app:menu="@menu/navigation" />
 
-
-
-
-
 </RelativeLayout>

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ModelClass.HomeCategoryModelClass;
+import bd.piniti.service.AddUserInformations.Categorys;
 import bd.piniti.service.All_Services_Activity;
 import bd.piniti.service.R;
 import fragment.CategoryFragment;
@@ -66,17 +67,27 @@ public class HomeCategoryRecycleAdapter extends RecyclerView.Adapter<HomeCategor
         holder.image.setImageResource(lists.getImage());
         holder.title.setText(lists.getTitle());
 
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, All_Services_Activity.class);
-                intent.putExtra("layout", position);
-                context.startActivity(intent);
+                if(position==8){
+                    holder.itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent1 = new Intent(context, Categorys.class);
+                            context.startActivity(intent1);
+                        }
+                    });
+                }else {
+                    Intent intent = new Intent(context, All_Services_Activity.class);
+                    intent.putExtra("layout", position);
+                    context.startActivity(intent);
+                }
 
             }
         });
-
-
     }
 
 

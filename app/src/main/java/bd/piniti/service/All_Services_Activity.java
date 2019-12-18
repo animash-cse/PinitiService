@@ -35,6 +35,7 @@ public class All_Services_Activity extends AppCompatActivity {
             }
         });
 
+
         Intent intent = getIntent();
         tab_value = intent.getIntExtra("layout", 0);
 
