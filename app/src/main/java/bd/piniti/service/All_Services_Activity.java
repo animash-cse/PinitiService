@@ -58,6 +58,9 @@ public class All_Services_Activity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Moving Homes"));
         tabLayout.addTab(tabLayout.newTab().setText("Plumber"));
         tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tutor"));
+        tabLayout.addTab(tabLayout.newTab().setText("Health"));
+        tabLayout.addTab(tabLayout.newTab().setText("Farm & Agri"));
 
 
 //            Tablayout customefonts code is here.
