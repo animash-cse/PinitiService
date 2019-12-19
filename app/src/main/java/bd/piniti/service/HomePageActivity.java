@@ -57,7 +57,7 @@ public class HomePageActivity extends AppCompatActivity {
                 case R.id.navigation_gifts:
 
                     city_linear.setVisibility(View.GONE);
-                    title.setText("Category");
+                    title.setText("Favorite");
                     fragment = new CategoryFragment();
                     loadFragment(fragment);
 
@@ -65,7 +65,7 @@ public class HomePageActivity extends AppCompatActivity {
                 case R.id.navigation_cart:
 
                     city_linear.setVisibility(View.GONE);
-                    title.setText("MyBooking");
+                    title.setText("My Booking");
                     fragment = new BookingFragment();
                     loadFragment(fragment);
 
