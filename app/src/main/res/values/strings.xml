@@ -31,4 +31,6 @@
     <string name="test_email">test@test.com</string>
     <string name="test_password">testpassword</string>
     <string name="firebase_path">location</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
