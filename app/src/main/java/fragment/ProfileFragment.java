@@ -33,9 +33,9 @@ public class ProfileFragment extends Fragment {
     private RecyclerView recyclerView;
     private ProfileRecycleAdapter bAdapter;
 
-    private Integer image[] = {R.drawable.ic_notifications,R.drawable.ic_booking,R.drawable.ic_manage_address,R.drawable.ic_help,
+    private Integer image[] = {R.drawable.ic_notifications,R.drawable.ic_booking,R.drawable.ic_notifications,R.drawable.ic_help,
     R.drawable.ic_rate_us,R.drawable.ic_share,R.drawable.ic_about,R.drawable.ic_t_and_c};
-    private String title[] = {"Notification","My Bookings","Manage Address","Help","Rate us","Share App","About Rapid","Terms & Conditions"};
+    private String title[] = {"Profile","Setting","Notification","Help","Rate us","Credit","About Piniti Service","Terms & Conditions"};
 
 
     @Override

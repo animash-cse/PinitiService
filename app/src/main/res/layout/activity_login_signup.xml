@@ -30,7 +30,7 @@
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            android:src="@drawable/logo_rapid" />
+            android:src="@drawable/piniti_logo" />
 
 
         <TextView
@@ -52,9 +52,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/titletxt"
             android:layout_marginTop="5dp"
+            android:letterSpacing="0.0625"
             android:fontFamily="@font/sf_pro_display_light"
             android:gravity="center"
-            android:text="Home Service Expert"
+            android:text="Makes Life Easier"
             android:textColor="@color/sub_txt"
             android:textSize="16.7sp" />
 
