@@ -1,8 +1,5 @@
 package ModelClass;
 
-/**
- * Created by wolfsoft5 on 8/1/19.
- */
 
 public class HomeCategoryModelClass {
 

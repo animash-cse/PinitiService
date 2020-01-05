@@ -2,9 +2,6 @@ package ModelClass;
 
 import java.util.ArrayList;
 
-/**
- * Created by wolfsoft5 on 9/1/19.
- */
 
 public class Team {
 

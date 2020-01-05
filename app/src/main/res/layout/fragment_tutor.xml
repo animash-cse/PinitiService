@@ -2,100 +2,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/CardReview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="0dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="11.7dp"
-            android:background="@drawable/gradient_rect"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_star3"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18.3sp"
-                android:text="4.5"
-                android:layout_marginLeft="8dp"
-                android:fontFamily="@font/roboto_bold"
-                android:textColor="@color/white"/>
-
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="1000+ Happy Customers"
-                android:layout_marginLeft="10dp"
-                android:textSize="13.3sp"
-                android:fontFamily="@font/roboto_regular"/>
-
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="15dp"
-                android:src="@drawable/ic_right_arrow3"
-                android:layout_gravity="center"/>
-
-
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clipToPadding="false"
             android:orientation="vertical">
 
-
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerview"
+            <ExpandableListView
+                android:id="@+id/expandblelistview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                android:clipToPadding="false"/>
+                android:layout_gravity="start"
+                android:background="@color/white"
+
+                android:childDivider="@color/white"
+                android:divider="#e2e2e2"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/linear_mehndi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Mehndi Artist"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="#f5f7f8"/>
-
+                android:background="#f5f7f8" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/txt_color"
-                    android:text="Why Rapid?"
-                    android:textSize="21.7sp"
                     android:fontFamily="@font/roboto_italic"
-                    android:textStyle="bold"/>
+                    android:text="Why Rapid?"
+                    android:textColor="@color/txt_color"
+                    android:textSize="21.7sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -107,16 +101,16 @@
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_verified_professionals"/>
+                        android:src="@drawable/ic_senior_beautician" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Verified Professionals"
-                        android:textColor="@color/walkthrough_txt"
-                        android:textSize="15sp"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="@font/roboto_regular"/>
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Verified Senior Beautician."
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -129,16 +123,16 @@
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_satisfaction"/>
+                        android:src="@drawable/ic_carry_item" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100% Satisfaction guranteed"
-                        android:textColor="@color/walkthrough_txt"
-                        android:textSize="15sp"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="@font/roboto_regular"/>
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="We Carry All The Required Items. "
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -152,22 +146,21 @@
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_on_time"/>
+                        android:src="@drawable/ic_hygiene" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="On Time Arrival"
-                        android:textColor="@color/walkthrough_txt"
-                        android:textSize="15sp"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="@font/roboto_regular"/>
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Most Focus On Hygiene."
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
             </LinearLayout>
+
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
-
-
+    </ScrollView>
 
 </LinearLayout>

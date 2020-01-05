@@ -27,17 +27,11 @@ public class CategoryFragment extends Fragment {
     private CategoryRecycleAdapter bAdapter;
 
 
-    private  Integer image[] = {R.drawable.ic_beauty,R.drawable.ic_appliance,R.drawable.ic_home_cleaning,
-            R.drawable.ic_wedding,R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,
-            R.drawable.ic_plumber,R.drawable.ic_electrician,R.drawable.ic_beauty,R.drawable.ic_appliance,
-            R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance,
-            R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance,
-            R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance,
-            R.drawable.ic_appliance,R.drawable.ic_appliance,R.drawable.ic_appliance};
+    private  Integer image[] = {R.drawable.ic_beauty,R.drawable.ic_appliance,R.drawable.ic_home_cleaning,R.drawable.ic_wedding,
+            R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,R.drawable.ic_plumber,
+            R.drawable.ic_electrician,  R.drawable.ic_electrician};
     private String title[] = {"Beauty & Spa","Appliance Repair","Home Cleaning","Weddings & Events","Paintings","Pest Control",
-            "Moving Homes","Plumber","Electrician","Tutor","Health","Farm & Agri","Home Service","Buy & Sell","Travel",
-            "Transportation","Rental","Shopping","Local Services","Laundry","Restaurant","Delivery","Professional Services",
-            "Devotional Services","Hotels","IT"};
+            "Moving Homes","Plumber","Electrician","Tutor"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

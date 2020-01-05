@@ -59,26 +59,9 @@ public class All_Services_Activity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Plumber"));
         tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
         tabLayout.addTab(tabLayout.newTab().setText("Tutor"));
-        tabLayout.addTab(tabLayout.newTab().setText("Health"));
-        tabLayout.addTab(tabLayout.newTab().setText("Farm & Agri"));
-        tabLayout.addTab(tabLayout.newTab().setText("Home Services"));
-        tabLayout.addTab(tabLayout.newTab().setText("Buy & Sell"));
-        tabLayout.addTab(tabLayout.newTab().setText("Travel"));
-        tabLayout.addTab(tabLayout.newTab().setText("Transportation"));
-        tabLayout.addTab(tabLayout.newTab().setText("Rental"));
-        tabLayout.addTab(tabLayout.newTab().setText("Shopping"));
-        tabLayout.addTab(tabLayout.newTab().setText("Local Services"));
-        tabLayout.addTab(tabLayout.newTab().setText("Laundry"));
-        tabLayout.addTab(tabLayout.newTab().setText("Restaurant"));
-        tabLayout.addTab(tabLayout.newTab().setText("Delivery"));
-        tabLayout.addTab(tabLayout.newTab().setText("Professional Services"));
-        tabLayout.addTab(tabLayout.newTab().setText("Devotional Services"));
-        tabLayout.addTab(tabLayout.newTab().setText("Hotels"));
-        tabLayout.addTab(tabLayout.newTab().setText("IT"));
 
 
-
-//            Tablayout customefonts code is here.
+//      Tablayout customefonts code is here.
 
         Typeface mTypeface = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         ViewGroup vg = (ViewGroup) tabLayout.getChildAt(0);
@@ -101,7 +84,7 @@ public class All_Services_Activity extends AppCompatActivity {
         /*on tab viewpager change code is here*/
 
         final ViewPager viewPager1 = (ViewPager) findViewById(R.id.pager);
-        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 9);
+        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 10);
         viewPager1.setAdapter(adapter);
         viewPager1.setOffscreenPageLimit(1);
         viewPager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
