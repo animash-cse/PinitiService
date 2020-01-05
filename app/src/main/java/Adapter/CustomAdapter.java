@@ -18,9 +18,6 @@ import bd.piniti.service.MakupAndHairActivity;
 import bd.piniti.service.R;
 import bd.piniti.service.SalonAtHomeWomenOne;
 
-/**
- * Created by wolfsoft5 on 9/1/19.
- */
 
 public class CustomAdapter extends BaseExpandableListAdapter {
 
@@ -90,9 +87,6 @@ public class CustomAdapter extends BaseExpandableListAdapter {
                     Intent intent =new Intent(c,MakupAndHairActivity.class);
                     c.startActivity(intent);
                 }
-
-
-
             }
         });
 

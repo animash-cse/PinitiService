@@ -39,12 +39,11 @@ public class LoginSignupActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SelectCountryRecycleAdapter bAdapter;
 
-    private Integer image[] = {R.drawable.ic_bangladesh,R.drawable.ic_india,R.drawable.ic_america,R.drawable.ic_canada,
-            R.drawable.ic_mexico,R.drawable.ic_australia,R.drawable.ic_brazil,
-                               R.drawable.ic_russia};
-    private String country_name[] = {"Bangladesh","India","US","Canada","Mexico","Australia","Brazil","Russia"};
-    private String country_code[] = {"+880","+91","+1","+1","+52","+61","+91","+43"};
-
+    private Integer image[] = {R.drawable.ic_bangladesh, R.drawable.ic_india, R.drawable.ic_america, R.drawable.ic_canada,
+            R.drawable.ic_mexico, R.drawable.ic_australia, R.drawable.ic_brazil,
+            R.drawable.ic_russia};
+    private String country_name[] = {"Bangladesh", "India", "US", "Canada", "Mexico", "Australia", "Brazil", "Russia"};
+    private String country_code[] = {"+880", "+91", "+1", "+1", "+52", "+61", "+91", "+43"};
 
 
     @Override
@@ -59,8 +58,10 @@ public class LoginSignupActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(LoginSignupActivity.this,OTPActivity.class);
-                startActivity(intent);*/
+                /*
+                Intent intent = new Intent(LoginSignupActivity.this,OTPActivity.class);
+                startActivity(intent);
+                */
 
 
                 String code = txt.getText().toString().trim();
@@ -117,12 +118,11 @@ public class LoginSignupActivity extends AppCompatActivity {
                 selectCountryModelClasses = new ArrayList<>();
 
                 for (int i = 0; i < image.length; i++) {
-                    SelectCountryModelClass mycreditList = new SelectCountryModelClass(image[i],country_name[i],country_code[i]);
+                    SelectCountryModelClass mycreditList = new SelectCountryModelClass(image[i], country_name[i], country_code[i]);
                     selectCountryModelClasses.add(mycreditList);
                 }
-                bAdapter = new SelectCountryRecycleAdapter(LoginSignupActivity.this,selectCountryModelClasses);
+                bAdapter = new SelectCountryRecycleAdapter(LoginSignupActivity.this, selectCountryModelClasses);
                 recyclerView.setAdapter(bAdapter);
-
 
 
                 slideDialog.getWindow().setAttributes(layoutParams);
@@ -132,9 +132,6 @@ public class LoginSignupActivity extends AppCompatActivity {
             }
         });
 
-
-
-//
 //        spinner = (Spinner)findViewById(R.id.spinner);
 //
 //        List<String> list = new ArrayList<String>();
@@ -146,6 +143,7 @@ public class LoginSignupActivity extends AppCompatActivity {
 //
 //        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(LoginSignupActivity.this, R.layout.spinner_item, R.id.spinner_text, list);
 //        spinner.setAdapter(dataAdapter);
+
     }
 
     public void selectedCountry(Integer image, String country_code) {

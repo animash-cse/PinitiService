@@ -58,9 +58,10 @@ public class All_Services_Activity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Moving Homes"));
         tabLayout.addTab(tabLayout.newTab().setText("Plumber"));
         tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tutor"));
 
 
-//            Tablayout customefonts code is here.
+//      Tablayout customefonts code is here.
 
         Typeface mTypeface = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         ViewGroup vg = (ViewGroup) tabLayout.getChildAt(0);
@@ -83,7 +84,7 @@ public class All_Services_Activity extends AppCompatActivity {
         /*on tab viewpager change code is here*/
 
         final ViewPager viewPager1 = (ViewPager) findViewById(R.id.pager);
-        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 9);
+        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 10);
         viewPager1.setAdapter(adapter);
         viewPager1.setOffscreenPageLimit(1);
         viewPager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
