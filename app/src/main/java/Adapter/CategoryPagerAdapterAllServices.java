@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import fragment.ApplianceRepairFragment;
 import fragment.BeautyFragment;
 import fragment.ElectricianFragment;
+import fragment.HealthFragment;
 import fragment.HomeCleaningFragment;
 import fragment.MovingHomeFragment;
 import fragment.PaintingFragment;
@@ -68,6 +69,9 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                         case 9:
                                 TutorFragment tab10 = new TutorFragment();
                                 return tab10;
+                        case 10:
+                                HealthFragment tab11 = new HealthFragment();
+                                return tab11;
 
                         default:
                                 return null;

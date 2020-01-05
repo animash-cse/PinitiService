@@ -59,6 +59,7 @@ public class All_Services_Activity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Plumber"));
         tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
         tabLayout.addTab(tabLayout.newTab().setText("Tutor"));
+        tabLayout.addTab(tabLayout.newTab().setText("Health"));
 
 
 //      Tablayout customefonts code is here.
@@ -84,7 +85,7 @@ public class All_Services_Activity extends AppCompatActivity {
         /*on tab viewpager change code is here*/
 
         final ViewPager viewPager1 = (ViewPager) findViewById(R.id.pager);
-        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 10);
+        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 11);
         viewPager1.setAdapter(adapter);
         viewPager1.setOffscreenPageLimit(1);
         viewPager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
