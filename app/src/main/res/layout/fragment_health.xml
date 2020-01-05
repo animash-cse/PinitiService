@@ -1,0 +1,392 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_ayurveda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageAyurveda"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textAyurveda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Ayurveda"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrowAyurveda"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_Homeopathy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageHomeopathy"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textHomeopathy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Homeopathy"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrowHomeopathy"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+
+            <ExpandableListView
+                android:id="@+id/expandblelistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@color/white"
+
+                android:childDivider="@color/white"
+                android:divider="#e2e2e2"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/linear_mehndi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Pharmacy"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linear_Hospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageHospital"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textHospital"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Hospital"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrowHospital"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_Eye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageEye"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textEye"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Eye Glass Store"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrowEye"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_Therapy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageTherapy"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textTherapy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Therapy"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrowTherapy"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_pain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="17dp"
+                android:paddingTop="10dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imagePain"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/mehendi_artists" />
+
+                <TextView
+                    android:id="@+id/textPain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Pain Management"
+                    android:textColor="@color/walkthrough_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/arrowPain"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:rotation="270"
+                    android:src="@drawable/ic_down_arrow5" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f5f7f8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_italic"
+                    android:text="Why Rapid?"
+                    android:textColor="@color/txt_color"
+                    android:textSize="21.7sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_senior_beautician" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Verified Senior Beautician."
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_carry_item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="We Carry All The Required Items. "
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_hygiene" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Most Focus On Hygiene."
+                        android:textColor="@color/walkthrough_txt"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
