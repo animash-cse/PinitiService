@@ -63,7 +63,7 @@ public class Categorys extends AppCompatActivity {
                 case R.id.navigation_gifts:
 
                     city_linear.setVisibility(View.GONE);
-                    title.setText("Favorite");
+                    title.setText("My Favorite");
                     fragment = new CategoryFragment();
                     loadFragment(fragment);
                     return true;
