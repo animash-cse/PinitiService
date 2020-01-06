@@ -29,6 +29,52 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:src="@drawable/ic_home3" />
+
+        <TextView
+            android:id="@+id/home_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Add Home"
+            android:textColor="@color/walkthrough_txt"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13sp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_work" />
+
+        <TextView
+            android:id="@+id/work_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Add Work"
+            android:textColor="@color/walkthrough_txt"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13sp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/ic_location" />
 
         <TextView
@@ -39,6 +85,30 @@
             android:clickable="true"
             android:focusable="true"
             android:text="Detect my Location"
+            android:textColor="@color/walkthrough_txt"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13sp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_map" />
+
+        <TextView
+            android:id="@+id/choose_on_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Choose On Map"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
     </LinearLayout>
