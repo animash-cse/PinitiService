@@ -72,6 +72,64 @@ public class CategoryPagerAdapterAllServices extends FragmentPagerAdapter {
                         case 10:
                                 HealthFragment tab11 = new HealthFragment();
                                 return tab11;
+                        case 11:
+                                ApplianceRepairFragment tab12 = new ApplianceRepairFragment();
+                                return tab12;
+                        case 12:
+                                HomeCleaningFragment tab13 = new HomeCleaningFragment();
+                                return tab13;
+
+                        case 13:
+                                WeddingEventsFragment tab14 = new WeddingEventsFragment();
+                                return tab14;
+
+                        case 14:
+                                PaintingFragment tab15 = new PaintingFragment();
+                                return tab15;
+
+                        case 15:
+                                PestControlFragment tab16 = new PestControlFragment();
+                                return tab16;
+
+                        case 16:
+                                MovingHomeFragment tab17 = new MovingHomeFragment();
+                                return tab17;
+
+                        case 17:
+                                PlumberFragment tab18 = new PlumberFragment();
+                                return tab18;
+
+                        case 18:
+                                ElectricianFragment tab19 = new ElectricianFragment();
+                                return tab19;
+                        case 19:
+                                TutorFragment tab20 = new TutorFragment();
+                                return tab20;
+                        case 20:
+                                HealthFragment tab21 = new HealthFragment();
+                                return tab21;
+                        case 21:
+                                ApplianceRepairFragment tab22 = new ApplianceRepairFragment();
+                                return tab22;
+                        case 22:
+                                HomeCleaningFragment tab23 = new HomeCleaningFragment();
+                                return tab23;
+
+                        case 23:
+                                WeddingEventsFragment tab24 = new WeddingEventsFragment();
+                                return tab24;
+
+                        case 24:
+                                PaintingFragment tab25 = new PaintingFragment();
+                                return tab25;
+
+                        case 25:
+                                PestControlFragment tab26 = new PestControlFragment();
+                                return tab26;
+
+                        case 26:
+                                MovingHomeFragment tab27 = new MovingHomeFragment();
+                                return tab27;
 
                         default:
                                 return null;

@@ -28,8 +28,8 @@ public class HomeFragment extends Fragment {
 
     private  Integer image[] = {R.drawable.ic_beauty,R.drawable.ic_appliance,R.drawable.ic_home_cleaning,R.drawable.ic_wedding,
                                 R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,R.drawable.ic_plumber};
-    private String title[] = {"Beauty & Spa","Appliance Repair","Home Cleaning","Weddings & Events","Paintings","Pest Control",
-                              "Moving Homes","Plumber"};
+    private String title[] = {"Beauty & Spa","Repair","Cleaning","Weddings & Events","Paintings","Pest Control",
+                              "Pack & Shift","Plumber"};
 
     private Integer imageMore = R.drawable.ic_more_hori;
     private String titleMore = "More";
