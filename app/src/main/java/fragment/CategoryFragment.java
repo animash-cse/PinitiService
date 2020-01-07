@@ -28,13 +28,13 @@ public class CategoryFragment extends Fragment {
 
 
     private  Integer image[] = {R.drawable.ic_beauty,R.drawable.ic_appliance,R.drawable.ic_home_cleaning,R.drawable.ic_wedding,
-            R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,R.drawable.ic_plumber,
+            R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,R.drawable.ic_wedding,R.drawable.ic_plumber,
             R.drawable.ic_electrician,  R.drawable.ic_electrician, R.drawable.ic_beauty, R.drawable.ic_beauty,R.drawable.ic_appliance,R.drawable.ic_home_cleaning,R.drawable.ic_wedding,
             R.drawable.ic_painting,R.drawable.ic_pest_control,R.drawable.ic_movinghome,R.drawable.ic_plumber,
-            R.drawable.ic_electrician,  R.drawable.ic_electrician, R.drawable.ic_beauty, R.drawable.ic_electrician,  R.drawable.ic_electrician, R.drawable.ic_beauty, R.drawable.ic_beauty};
-    private String title[] = {"Beauty & Spa","Repair","Cleaning","Weddings & Events","Paintings","Pest Control",
-            "Pack & Shift","Plumber","Electrician","Tutor", "Health","Farm & Agri","Home Service","Buy & Sell", "Travel",
-            "Transportation","Rental","Shopping", "Local Services","Laundry","Restaurant","Delivery", "Professional Services","Devotional Services","Hotels","IT"};
+            R.drawable.ic_electrician,  R.drawable.ic_electrician, R.drawable.ic_beauty, R.drawable.ic_electrician,  R.drawable.ic_electrician, R.drawable.ic_beauty, R.drawable.ic_beauty,R.drawable.ic_wedding};
+    private String title[] = {"Beauty & Spa","Repair","Cleaning","Weddings & Events","Paintings","Pest Control","Pack & Shift","Plumber","Buy & Sell","Delivery","Design","Devotional Services","Electrician",
+            "Farm & Agri","Financial Services","Health","Home Service","Hotels","IT","Laundry","Local Services",
+            "Professional Services","Rental","Restaurant","Shopping","Transportation","Travel","Tutor"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -49,6 +49,7 @@ public class All_Services_Activity extends AppCompatActivity {
 
 
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+
         tabLayout.addTab(tabLayout.newTab().setText("Beauty & Spa"));
         tabLayout.addTab(tabLayout.newTab().setText("Repair"));
         tabLayout.addTab(tabLayout.newTab().setText("Cleaning"));
@@ -57,24 +58,27 @@ public class All_Services_Activity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Pest Control"));
         tabLayout.addTab(tabLayout.newTab().setText("Pack & Shift"));
         tabLayout.addTab(tabLayout.newTab().setText("Plumber"));
-        tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tutor"));
-        tabLayout.addTab(tabLayout.newTab().setText("Health"));
-        tabLayout.addTab(tabLayout.newTab().setText("Farm & Agri"));
-        tabLayout.addTab(tabLayout.newTab().setText("Home Services"));
         tabLayout.addTab(tabLayout.newTab().setText("Buy & Sell"));
-        tabLayout.addTab(tabLayout.newTab().setText("Travel"));
-        tabLayout.addTab(tabLayout.newTab().setText("Transportation"));
-        tabLayout.addTab(tabLayout.newTab().setText("Rental"));
-        tabLayout.addTab(tabLayout.newTab().setText("Shopping"));
-        tabLayout.addTab(tabLayout.newTab().setText("Local Services"));
-        tabLayout.addTab(tabLayout.newTab().setText("Laundry"));
-        tabLayout.addTab(tabLayout.newTab().setText("Restaurant"));
         tabLayout.addTab(tabLayout.newTab().setText("Delivery"));
-        tabLayout.addTab(tabLayout.newTab().setText("Professional Services"));
+        tabLayout.addTab(tabLayout.newTab().setText("Design"));
         tabLayout.addTab(tabLayout.newTab().setText("Devotional Services"));
+        tabLayout.addTab(tabLayout.newTab().setText("Electrician"));
+        tabLayout.addTab(tabLayout.newTab().setText("Farm & Agri"));
+        tabLayout.addTab(tabLayout.newTab().setText("Financial Services"));
+        tabLayout.addTab(tabLayout.newTab().setText("Health"));
+        tabLayout.addTab(tabLayout.newTab().setText("Home Services"));
         tabLayout.addTab(tabLayout.newTab().setText("Hotels"));
         tabLayout.addTab(tabLayout.newTab().setText("IT"));
+        tabLayout.addTab(tabLayout.newTab().setText("Laundry"));
+        tabLayout.addTab(tabLayout.newTab().setText("Local Services"));
+        tabLayout.addTab(tabLayout.newTab().setText("Professional Services"));
+        tabLayout.addTab(tabLayout.newTab().setText("Rental"));
+        tabLayout.addTab(tabLayout.newTab().setText("Restaurant"));
+        tabLayout.addTab(tabLayout.newTab().setText("Shopping"));
+        tabLayout.addTab(tabLayout.newTab().setText("Transportation"));
+        tabLayout.addTab(tabLayout.newTab().setText("Travel"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tutor"));
+
 
 //      Tablayout customefonts code is here.
 
@@ -99,7 +103,7 @@ public class All_Services_Activity extends AppCompatActivity {
         /*on tab viewpager change code is here*/
 
         final ViewPager viewPager1 = (ViewPager) findViewById(R.id.pager);
-        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 26);
+        CategoryPagerAdapterAllServices adapter = new CategoryPagerAdapterAllServices(getSupportFragmentManager(), 28);
         viewPager1.setAdapter(adapter);
         viewPager1.setOffscreenPageLimit(1);
         viewPager1.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

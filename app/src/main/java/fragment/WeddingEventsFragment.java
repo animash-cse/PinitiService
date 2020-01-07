@@ -26,8 +26,13 @@ public class WeddingEventsFragment extends Fragment {
 
 
     private  Integer image[] = {R.drawable.party_decoration,R.drawable.wedding_photographer,R.drawable.event_photographer,
-            R.drawable.makeup_and_hairstyling, R.drawable.mehendi_artists};
-    private String title[] = {"Party Decoration","Wedding Photographer","Event Photographer","Makeup and Hairstyling","Mehendi Artists"};
+            R.drawable.makeup_and_hairstyling, R.drawable.mehendi_artists, R.drawable.party_decoration,R.drawable.wedding_photographer,R.drawable.event_photographer,
+            R.drawable.makeup_and_hairstyling, R.drawable.mehendi_artists, R.drawable.party_decoration,R.drawable.wedding_photographer,R.drawable.event_photographer,
+            R.drawable.makeup_and_hairstyling, R.drawable.mehendi_artists, R.drawable.party_decoration,R.drawable.wedding_photographer,R.drawable.event_photographer,
+            R.drawable.makeup_and_hairstyling, R.drawable.mehendi_artists, R.drawable.makeup_and_hairstyling, R.drawable.mehendi_artists};
+    private String title[] = {"Decoration","Wedding Photographer","Event Photographer","Makeup Artists","Hairstyling","Mehendi Artists","Venue","Catering","Band",
+            "Transportation","Cards & Stationery","Favor & Gifts","Flowers","Lighting","Dress & Attire","Videographer","Jewelry","DJ","Ceremony Music","Officiant",
+            "Event Rentals","Party Supplies"};
 
 
 
