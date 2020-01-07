@@ -39,9 +39,9 @@ public class WeddingEventRecycleAdapter extends RecyclerView.Adapter<WeddingEven
         public MyViewHolder(View view) {
             super(view);
 
-            image = (ImageView) view.findViewById(R.id.image);
-            title = (TextView) view.findViewById(R.id.title);
-            linear = (LinearLayout) view.findViewById(R.id.linear);
+            image = view.findViewById(R.id.image);
+            title = view.findViewById(R.id.title);
+            linear = view.findViewById(R.id.linear);
 
 
         }

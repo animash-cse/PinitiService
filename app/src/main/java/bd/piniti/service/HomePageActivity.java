@@ -140,7 +140,7 @@ public class HomePageActivity extends AppCompatActivity {
         databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
 
 
-        databaseUser.addValueEventListener(new ValueEventListener() {
+       /* databaseUser.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -152,14 +152,14 @@ public class HomePageActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
 
 
         loadFragment(new HomeFragment());
 
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -202,12 +202,17 @@ public class HomePageActivity extends AppCompatActivity {
         logitude = location.getLongitude();
         try {
             Geocoder geocoder = new Geocoder(this);
-            List<Address> addresses = null;
+            List<Address> addresses;
             addresses = geocoder.getFromLocation(latitude, logitude, 1);
             String countryName = addresses.get(0).getCountryName();
-            String cityName = addresses.get(0).getLocality();
-            databaseUser.child("last_location").setValue(cityName);
-            city.setText(cityName);
+            String adminArea = addresses.get(0).getAdminArea();
+            String subAdminArea = addresses.get(0).getSubAdminArea();
+            String locality = addresses.get(0).getLocality();
+            String subLocality = addresses.get(0).getSubLocality();
+            String subCityName = addresses.get(0).getSubLocality();
+            String address = subLocality+","+locality+","+subAdminArea+","+adminArea;
+            databaseUser.child("last_location").setValue(address);
+            city.setText(address);
 
         } catch (IOException e) {
             e.printStackTrace();

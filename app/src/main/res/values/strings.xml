@@ -33,4 +33,6 @@
     <string name="firebase_path">location</string>
 
     <string name="action_settings">Settings</string>
+    <string name="turn_on_location">Turn On Location</string>
+    <string name="you_are_in">You are in</string>
 </resources>
