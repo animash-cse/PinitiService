@@ -28,11 +28,13 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -52,6 +54,12 @@ import fragment.ProfileFragment;
 
 public class HomePageActivity extends AppCompatActivity {
 
+    private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
+    Context context = this;
+    Button fetch;
+    TextView user_location;
+    private FusedLocationProviderClient mFusedLocationClient;
+
 
     FrameLayout frameLayout;
 
@@ -59,7 +67,6 @@ public class HomePageActivity extends AppCompatActivity {
     TextView title, city;
     boolean gps_enabled = false;
     boolean network_enabled = false;
-    private LocationManager locationManager;
     private double latitude, logitude;
     // Declare Database for data fields
     private DatabaseReference databaseUser;
@@ -140,21 +147,6 @@ public class HomePageActivity extends AppCompatActivity {
         databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
 
 
-       /* databaseUser.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                String cityname = dataSnapshot.child("last_location").getValue(String.class);
-                city.setText(cityname);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });*/
-
-
 
         loadFragment(new HomeFragment());
 
@@ -177,27 +169,39 @@ public class HomePageActivity extends AppCompatActivity {
         }
 
 
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        Location location = locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
+        if (locationManager != null) {
+            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                onLocationChange(location);
+            } else {
 
+                databaseUser.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-        onLocationChanged(location);
+                        String cityname = dataSnapshot.child("last_location").getValue(String.class);
+                        city.setText("Last Location: "+cityname);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+                //city.setText(R.string.turn_on_location);
+            }
+        }
 
 
     }
 
-    private void onLocationChanged(Location location) {
+
+    private void onLocationChange(Location location) {
         latitude = location.getLatitude();
         logitude = location.getLongitude();
         try {
@@ -205,12 +209,13 @@ public class HomePageActivity extends AppCompatActivity {
             List<Address> addresses;
             addresses = geocoder.getFromLocation(latitude, logitude, 1);
             String countryName = addresses.get(0).getCountryName();
+            String addressLine = addresses.get(0).getAddressLine(1);
             String adminArea = addresses.get(0).getAdminArea();
             String subAdminArea = addresses.get(0).getSubAdminArea();
             String locality = addresses.get(0).getLocality();
             String subLocality = addresses.get(0).getSubLocality();
-            String subCityName = addresses.get(0).getSubLocality();
-            String address = subLocality+","+locality+","+subAdminArea+","+adminArea;
+            String fetureName = addresses.get(0).getFeatureName();
+            String address = locality + "," + subAdminArea + "," + adminArea;
             databaseUser.child("last_location").setValue(address);
             city.setText(address);
 
