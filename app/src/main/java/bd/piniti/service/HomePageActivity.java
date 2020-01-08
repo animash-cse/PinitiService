@@ -3,7 +3,6 @@ package bd.piniti.service;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -12,7 +11,6 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 
-import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -20,7 +18,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -30,6 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -49,6 +47,7 @@ import java.util.List;
 
 import fragment.BookingFragment;
 import fragment.CategoryFragment;
+import fragment.FavoriteFragment;
 import fragment.HomeFragment;
 import fragment.ProfileFragment;
 
@@ -65,6 +64,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     LinearLayout linear, city_linear;
     TextView title, city;
+    private ImageView search;
     boolean gps_enabled = false;
     boolean network_enabled = false;
     private double latitude, logitude;
@@ -92,7 +92,7 @@ public class HomePageActivity extends AppCompatActivity {
 
                     city_linear.setVisibility(View.GONE);
                     title.setText("My Favorite");
-                    fragment = new CategoryFragment();
+                    fragment = new FavoriteFragment();
                     loadFragment(fragment);
 
                     return true;
@@ -126,18 +126,13 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
 
-        linear = findViewById(R.id.linear);
-        linear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomePageActivity.this, LocationActivity.class);
-                startActivity(intent);
-            }
-        });
-
         city_linear = findViewById(R.id.city_linear);
         title = findViewById(R.id.title);
         city = findViewById(R.id.city_name);
+
+        // Button Actions for go location page and search
+        linear = findViewById(R.id.linear);
+        search = findViewById(R.id.search);
 
         // Here get user id in currentFirebaseUser
         //  Declare firebase user for get user id
@@ -197,7 +192,27 @@ public class HomePageActivity extends AppCompatActivity {
             }
         }
 
+        buttonAction();
 
+    }
+
+    private void buttonAction() {
+
+        linear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageActivity.this, LocationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageActivity.this, SearchingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

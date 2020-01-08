@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -29,6 +30,7 @@ public class LocationActivity extends AppCompatActivity {
 
     private CardView cardview;
     private TextView location, home, work, chooseOnMap;
+    private ImageView back;
     private EditText addr;
     private LatLng mLatLng;
 
@@ -37,6 +39,7 @@ public class LocationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
 
+        back = findViewById(R.id.back_img);
         addr = findViewById(R.id.address);
         location = findViewById(R.id.detect_my_location);
         home = findViewById(R.id.home_location);
@@ -76,6 +79,13 @@ public class LocationActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LocationActivity.this, GetLocation.class);
                 startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
     }

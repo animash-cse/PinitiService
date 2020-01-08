@@ -21,7 +21,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Enter Location"
+        android:hint="Enter Location"
         android:background="@color/transperent"
         android:textSize="15sp"
         android:layout_marginLeft="18sp"
