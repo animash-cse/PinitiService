@@ -3,20 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Show Address"
-        android:layout_margin="5dp"
-        />
+
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </com.google.android.gms.maps.MapView>
 
-
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#4FC3F7"
+        android:hint="Show Address"
+        android:gravity="center_horizontal"
+        />
     <ImageView
         android:layout_centerInParent="true"
         android:src="@drawable/map_pin"

@@ -45,8 +45,8 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.List;
 
+import bd.piniti.service.location.LocationActivity;
 import fragment.BookingFragment;
-import fragment.CategoryFragment;
 import fragment.FavoriteFragment;
 import fragment.HomeFragment;
 import fragment.ProfileFragment;

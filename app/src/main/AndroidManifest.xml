@@ -205,7 +205,7 @@
         <activity android:name=".InverterOneActivity" />
         <activity android:name=".FullHomeCheckElectricityOneActivity" />
         <activity android:name=".FullHomeCheckElectricitySecondActivity" />
-        <activity android:name=".LocationActivity" />
+        <activity android:name=".location.LocationActivity" />
         <activity android:name=".SearchingActivity" />
 
         <service android:name=".location.TrackingService" />
