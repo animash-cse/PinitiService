@@ -36,8 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:focusable="true"
             android:text="Add Home"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
@@ -65,8 +63,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:focusable="true"
             android:text="Add Work"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
@@ -94,8 +90,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:focusable="true"
             android:text="Detect my Location"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
@@ -123,8 +117,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:focusable="true"
             android:text="Choose On Map"
             android:textColor="@color/walkthrough_txt"
             android:textSize="15sp" />
