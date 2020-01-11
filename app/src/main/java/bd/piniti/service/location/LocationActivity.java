@@ -18,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,10 +43,9 @@ public class LocationActivity extends AppCompatActivity {
 
 
     private CardView cardview;
-    private TextView location, home, work, chooseOnMap;
-    private ImageView back;
-
-    private LatLng mLatLng;
+    private LinearLayout location, home, work, chooseOnMap;
+    private ImageView back, cancle;
+    private EditText searchText;
     private DatabaseReference databaseUser;
 
 
@@ -59,9 +59,10 @@ public class LocationActivity extends AppCompatActivity {
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Set database location
-        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
+        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("Locations");
 
         back = findViewById(R.id.back_img);
+        searchText = findViewById(R.id.search_text);
         location = findViewById(R.id.detect_my_location);
         home = findViewById(R.id.home_location);
         work = findViewById(R.id.work_location);
@@ -77,27 +78,39 @@ public class LocationActivity extends AppCompatActivity {
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LocationActivity.this, GetLocation.class);
-                startActivity(intent);
+                Toast.makeText(LocationActivity.this, "Disable At This Time", Toast.LENGTH_LONG).show();
             }
         });
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showMapsDialog("home_location", "home_loc_text", "Home Location Added");
+                //showMapsDialog("home_location", "home_loc_text", "Home Location Added");
+                Intent intent = new Intent(LocationActivity.this, GetLocation.class);
+                intent.putExtra("message", "Home Location Added");
+                intent.putExtra("locationText", "home_loc_text");
+                intent.putExtra("locationLatlang", "home_location");
+                startActivity(intent);
             }
         });
         work.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showMapsDialog("work_location", "work_loc_text", "Work Location Added");
+                //showMapsDialog("work_location", "work_loc_text", "Work Location Added");
+                Intent intent = new Intent(LocationActivity.this, GetLocation.class);
+                intent.putExtra("message", "Work Location Added");
+                intent.putExtra("locationText", "work_loc_text");
+                intent.putExtra("locationLatlang", "work_location");
+                startActivity(intent);
             }
         });
         chooseOnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LocationActivity.this, GetLocation.class);
+                intent.putExtra("message", "Service Location Added");
+                intent.putExtra("locationText", "service_loc_text");
+                intent.putExtra("locationLatlang", "service_in");
                 startActivity(intent);
             }
         });
@@ -106,6 +119,13 @@ public class LocationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+        cancle = findViewById(R.id.cancle);
+        cancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchText.setText("");
             }
         });
     }
@@ -126,9 +146,23 @@ public class LocationActivity extends AppCompatActivity {
         dialog.setCancelable(true); //dismiss by clicking outside
         dialog.show();
 
-        GoogleMap mMap = null;
-        MapView mMapView = (MapView) dialog.findViewById(R.id.mapView);
-        TextView address = dialog.findViewById(R.id.address);
+        EditText address = dialog.findViewById(R.id.search_text);
+
+        (dialog.findViewById(R.id.cancle)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                address.setText("");
+            }
+        });
+        (dialog.findViewById(R.id.back_image)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        MapView mMapView = dialog.findViewById(R.id.mapView);
+        //TextView address = dialog.findViewById(R.id.address);
         MapsInitializer.initialize(LocationActivity.this);
         mMapView.onCreate(dialog.onSaveInstanceState());
         mMapView.onResume();

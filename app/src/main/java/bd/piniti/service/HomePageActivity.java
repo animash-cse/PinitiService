@@ -139,9 +139,7 @@ public class HomePageActivity extends AppCompatActivity {
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Set database location
-        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid());
-
-
+        databaseUser = FirebaseDatabase.getInstance().getReference().child("Users").child(currentFirebaseUser.getUid()).child("Locations");
 
         loadFragment(new HomeFragment());
 

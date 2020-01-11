@@ -20,6 +20,7 @@
     </android.support.v7.widget.CardView>
 
     <LinearLayout
+        android:id="@+id/home_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -32,7 +33,6 @@
             android:src="@drawable/ic_home3" />
 
         <TextView
-            android:id="@+id/home_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -49,6 +49,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp" />
     <LinearLayout
+        android:id="@+id/work_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -61,7 +62,6 @@
             android:src="@drawable/ic_work" />
 
         <TextView
-            android:id="@+id/work_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -78,6 +78,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
     <LinearLayout
+        android:id="@+id/detect_my_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -90,7 +91,6 @@
             android:src="@drawable/ic_location" />
 
         <TextView
-            android:id="@+id/detect_my_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -107,6 +107,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp" />
     <LinearLayout
+        android:id="@+id/choose_on_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -119,7 +120,6 @@
             android:src="@drawable/ic_map" />
 
         <TextView
-            android:id="@+id/choose_on_map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
