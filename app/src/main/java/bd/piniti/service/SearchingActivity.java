@@ -32,10 +32,5 @@ public class SearchingActivity extends AppCompatActivity {
                 searchText.setText("");
             }
         });
-
-
-
-
-        ///////  gjhfhfchgdchsdhdj
     }
 }
